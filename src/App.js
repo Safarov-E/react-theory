@@ -12,17 +12,19 @@ class App extends Component {
     ], 
     pageTitle: 'React Component'
   }
-/*  changeTitleHandle: function() {
-    
-  } Аналогично */
-/*   changeTitleHandle() {
 
-  } Аналогично */
   changeTitleHandle = () => {
-    console.log('cliked')
+    const oldTitle = this.state.pageTitle
+
+    const newTitle = oldTitle + ' (changed)'
+
+    this.setState({
+      pageTitle:  newTitle
+    })
   }
 
   render() {
+    console.log('Render')
     const divStyle = {
       'textAlign': 'center'
     }
