@@ -31,7 +31,7 @@ class App extends Component {
     })
   }
 
-  deleteHendler(index) {
+  deleteHendler = (index) => {
     const cars = this.state.cars.concat()
     cars.splice(index, 1)
 
@@ -67,7 +67,13 @@ class App extends Component {
           onClick={this.toggleCarsHandler}  
         >Toggle cars </button>
 
-        { cars } 
+        <div style={{
+          width: 400,
+          margin: 'auto',
+          paddingTop: '20px'
+        }}>
+          { cars } 
+        </div>
       </div>
     );
   }
